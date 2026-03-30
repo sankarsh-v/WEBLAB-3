@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+<script>
+function calculate(operation) {
+  var num1 = parseFloat(document.getElementById("num1").value);
+  var num2 = parseFloat(document.getElementById("num2").value);
+  var result;
+
+  switch(operation) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      if (num2 === 0) {
+        result = "Cannot divide by zero";
+      } else {
+        result = num1 / num2;
+      }
+      break;
+  }
+
+  document.getElementById("output").innerHTML = result;
+}
+</script>
+</head>
+<body>
+
+<input type="number" id="num1" step="any" placeholder="Enter first number"><br><br>
+<input type="number" id="num2" step="any" placeholder="Enter second number"><br><br>
+
+<button onclick="calculate('+')">Add</button>
+<button onclick="calculate('-')">Subtract</button>
+<button onclick="calculate('*')">Multiply</button>
+<button onclick="calculate('/')">Divide</button>
+
+<p id="output"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
