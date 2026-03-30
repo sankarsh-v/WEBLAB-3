@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Email Generator</title>
+<script>
+function generateEmail(btn) {
+  var form = btn.form;
+  var fname = form.elements["fname"].value;
+  var lname = form.elements["lname"].value;
+  var email = fname + "." + lname + "@park.edu";
+  document.getElementById("result").innerHTML = email;
+  form.reset();
+  form.elements["fname"].focus();
+}
+</script>
+</head>
+<body>
+
+<form>
+  <input type="text" name="fname" placeholder="First Name"><br><br>
+  <input type="text" name="lname" placeholder="Last Name"><br><br>
+  <button type="button" onclick="generateEmail(this)">Generate Email</button>
+</form>
+
+<p id="result"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
