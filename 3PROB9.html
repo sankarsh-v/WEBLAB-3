@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio Button Selection</title>
+<script>
+function showSelected() {
+  var colors = document.getElementsByName("color");
+  var selected = "";
+
+  for (var i = 0; i < colors.length; i++) {
+    if (colors[i].checked) {
+      selected = colors[i].value;
+    }
+  }
+
+  document.getElementById("result").innerHTML = selected;
+}
+</script>
+</head>
+<body>
+
+<input type="radio" name="color" value="Red"> Red
+<input type="radio" name="color" value="Green"> Green
+<input type="radio" name="color" value="Blue"> Blue
+<br><br>
+
+<button onclick="showSelected()">Show Selected Color</button>
+
+<p id="result"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
