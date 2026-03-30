@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<title>Problem 16</title>
+<style>
+img {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.bottom-right { position: fixed; bottom: 10px; right: 10px; font-size:12px; }
+</style>
+ 
+<script>
+var topIndex = 1;
+ 
+function bringFront(img) {
+    img.style.zIndex = ++topIndex;
+}
+</script>
+</head>
+ 
+<body>
+ 
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" style="top:50px;left:50px;" onclick="bringFront(this)">
+<img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" style="top:80px;left:80px;" onclick="bringFront(this)">
+<img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8" style="top:110px;left:110px;" onclick="bringFront(this)">
+<img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0" style="top:140px;left:140px;" onclick="bringFront(this)">
+ 
+<div class="bottom-right">V GNAN SANKARSH - 24BCE0588</div>
+
+</body>
+</html>
