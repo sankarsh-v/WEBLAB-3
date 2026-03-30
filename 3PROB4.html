@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rectangle Area</title>
+<script>
+function calculateArea() {
+  var lengthValue = 10;
+  var widthValue = 5;
+  var areaResult1 = lengthValue * widthValue;
+
+  lengthValue = 10.5;
+  widthValue = 5.2;
+  var areaResult2 = lengthValue * widthValue;
+
+  document.getElementById("output").innerHTML =
+    "Area with integers: " + areaResult1 + "<br>" +
+    "Area with floating values: " + areaResult2;
+}
+</script>
+</head>
+<body onload="calculateArea()">
+
+<p id="output"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
