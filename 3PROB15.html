@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Customization Tool</title>
+<style>
+.box {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+</style>
+
+<script>
+function applyStyles() {
+  var text = document.getElementById("text");
+  var size = document.getElementById("size").value;
+  var color = document.getElementById("color").value;
+  var bg = document.getElementById("bg").value;
+
+  text.style.fontSize = size + "px";
+  text.style.color = color;
+  text.style.backgroundColor = bg;
+}
+</script>
+</head>
+<body>
+
+<fieldset class="box">
+  <legend>Font Customization</legend>
+
+  Font Size:
+  <input type="range" id="size" min="10" max="50" value="20" oninput="applyStyles()"><br><br>
+
+  Text Color:
+  <input type="color" id="color" onchange="applyStyles()"><br><br>
+
+  Background Color:
+  <input type="color" id="bg" onchange="applyStyles()">
+</fieldset>
+
+<p id="text">Customize this text using the controls above.</p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
