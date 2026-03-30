@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Information System</title>
+<style>
+body {
+  font-family: Arial;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 400px;
+  border-radius: 8px;
+}
+
+input, select {
+  width: 90%;
+  padding: 8px;
+  margin: 8px;
+}
+
+button {
+  padding: 8px 15px;
+  margin: 5px;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+</style>
+
+<script>
+var students = [];
+
+function Student(name, age, course) {
+  this.name = name;
+  this.age = age;
+  this.course = course;
+
+  this.getDetails = function() {
+    return this.name + " | " + this.age + " | " + this.course;
+  }
+}
+
+function addStudent(btn) {
+  var form = btn.form;
+
+  var name = form.elements["name"].value;
+  var age = form.elements["age"].value;
+  var course = form.elements["course"].value;
+
+  var studentObj = new Student(name, age, course);
+  students.push(studentObj);
+
+  displayStudents();
+
+  form.reset();
+  form.elements["name"].focus();
+}
+
+function displayStudents() {
+  var table = "<tr><th>Name</th><th>Age</th><th>Course</th></tr>";
+
+  for (var i = 0; i < students.length; i++) {
+    table += "<tr><td>" + students[i].name + "</td><td>" + students[i].age + "</td><td>" + students[i].course + "</td></tr>";
+  }
+
+  document.getElementById("result").innerHTML = table;
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Student Information System</h2>
+
+  <form>
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="number" name="age" placeholder="Age"><br>
+    <select name="course">
+      <option>Course</option>
+      <option>B.Tech</option>
+      <option>B.Sc</option>
+      <option>BCA</option>
+    </select><br>
+
+    <button type="button" onclick="addStudent(this)">Add Student</button>
+  </form>
+</div>
+
+<table id="result"></table>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
