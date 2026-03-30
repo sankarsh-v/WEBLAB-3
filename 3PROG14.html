@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Styling App</title>
+<style>
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.box {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+</style>
+
+<script>
+function applyStyle(style) {
+  document.getElementById("text").className = style;
+}
+
+function applyMultiple() {
+  document.getElementById("text").className = "italic bold smallcaps";
+}
+</script>
+</head>
+<body>
+
+<fieldset class="box">
+  <legend>Text Styling Controls</legend>
+
+  <button onclick="applyStyle('italic')">Italic</button>
+  <button onclick="applyStyle('bold')">Bold</button>
+  <button onclick="applyStyle('smallcaps')">Small Caps</button>
+  <button onclick="applyMultiple()">All Styles</button>
+</fieldset>
+
+<p id="text">This is a sample message for styling.</p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
