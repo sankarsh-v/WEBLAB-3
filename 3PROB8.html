@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication Table</title>
+<script>
+function printTable() {
+  var num = parseInt(document.getElementById("num").value);
+  var i = 1;
+  var output = "";
+
+  do {
+    output += num + " x " + i + " = " + (num * i) + "<br>";
+    i++;
+  } while (i <= 10);
+
+  document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+<body>
+
+<input type="text" id="num" placeholder="Enter a number"><br><br>
+<button onclick="printTable()">Show Table</button>
+
+<p id="result"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
