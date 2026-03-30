@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Order Form</title>
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+fieldset {
+  margin: 15px;
+  padding: 15px;
+  border: 2px solid #333;
+}
+
+button {
+  padding: 10px 20px;
+}
+</style>
+
+<script>
+function calculateTotal() {
+  var items = document.querySelectorAll("input[type=checkbox]:checked");
+  var total = 0;
+
+  for (var item of items) {
+    total += parseFloat(item.value);
+  }
+
+  document.getElementById("result").innerHTML = "Total Price: ₹" + total;
+}
+</script>
+</head>
+<body>
+
+<h2>Product Order Form</h2>
+
+<form>
+
+<fieldset>
+  <legend>Electronics</legend>
+  <input type="checkbox" value="20000"> Mobile (₹20000)<br>
+  <input type="checkbox" value="50000"> Laptop (₹50000)<br>
+</fieldset>
+
+<fieldset>
+  <legend>Clothing</legend>
+  <input type="checkbox" value="1000"> Shirt (₹1000)<br>
+  <input type="checkbox" value="2000"> Jeans (₹2000)<br>
+</fieldset>
+
+<fieldset>
+  <legend>Accessories</legend>
+  <input type="checkbox" value="500"> Watch (₹500)<br>
+  <input type="checkbox" value="300"> Belt (₹300)<br>
+</fieldset>
+
+<button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+</form>
+
+<p id="result"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
