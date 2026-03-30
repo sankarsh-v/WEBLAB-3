@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>While Loop Numbers</title>
+<script>
+function printNumbers() {
+  var n = parseInt(document.getElementById("num").value);
+  var i = 1;
+  var output = "";
+
+  while (i <= n) {
+    output += i + " ";
+    i++;
+  }
+
+  document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+<body>
+
+<input type="text" id="num" placeholder="Enter N"><br><br>
+<button onclick="printNumbers()">Print Numbers</button>
+
+<p id="result"></p>
+
+<p style="font-size:12px;">V GNAN SANKARSH - 24BCE0588</p>
+
+</body>
+</html>
